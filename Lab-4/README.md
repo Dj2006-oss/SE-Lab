@@ -1,75 +1,86 @@
-# Rock Paper Scissor Lab
+# Rock Paper Scissors Lab
 
-This project is an interactive hand-game duel using **Pygame**. It introduces students to dictionary-based rule lookups, automated CPU decision-making, temporary result display timers, and modular UI button interaction within an object-oriented codebase.
----
+This project is an interactive Rock Paper Scissors game built using **Python and Pygame**. The lab focuses on debugging, AI-assisted development, and implementing additional features to improve gameplay.
 
-## What's Provided
+## Project Overview
 
-A working Rock Paper Scissors game with:
+The starter project contains a working Rock Paper Scissors game with a deliberate scoring bug and three additional features to implement. ChatGPT was used as a debugging and pair-programming assistant to analyze the code, correct the bug, and implement the required improvements.
 
-- Three interactive choice buttons (`ROCK`, `PAPER`, `SCISSORS`) with mouse hover and click response states
-- An automated computer opponent selecting moves at random
-- Live scoreboard tracking player score and CPU score independently
-- Timed result display that shows the outcome for 1.8 seconds before clearing picks for the next round
+## Tasks Completed
 
-It has **one deliberate bug** and **three optional features** left as tasks to implement. You are expected to **analyze**, **interact with an AI assistant**, and **complete/fix** the game to make it fully functional and more interesting.
+### Task 1: Fix the Inverted Outcome Evaluation Bug
 
-### **Use an LLM (e.g. ChatGPT or Claude) as your debugging and pair-programming partner for this lab.**
----
+Corrected the outcome evaluation logic so that the game follows standard Rock Paper Scissors rules:
+
+- Rock beats Scissors.
+- Scissors beats Paper.
+- Paper beats Rock.
+- Identical choices result in a draw.
+
+The scoring logic was corrected so that points are awarded to the appropriate winner.
+
+### Task 2: Implement First-to-5 Match Victory State
+
+Implemented a first-to-5 match system. The game ends when either the player or the computer reaches five points. A match victory message is displayed, and the player can restart the game.
+
+### Task 3: Implement Adaptive AI Pattern Tracking
+
+Improved the computer opponent by tracking the player's recent moves and adapting its selections to counter frequently chosen options.
+
+### Task 4: Implement Procedural Gesture Icons and Reveal Animations
+
+Added visual gesture icons for Rock, Paper, and Scissors, along with a countdown and reveal sequence before displaying the selected moves.
+
+## Technologies Used
+
+- Python
+- Pygame
+- Git and GitHub
+- ChatGPT for AI-assisted debugging and development
 
 ## Getting Started
 
-### Setup
+### Prerequisites
 
-1. Make sure you have Python 3.10+ installed.
-2. Install dependencies:
+- Python 3.10 or later
+- Pygame
 
-```bash
-pip install pygame
-```
+### Installation
 
-3. Run the game:
+1. Clone the game repository:
 
-```bash
-python main.py
-```
+   ```bash
+   git clone https://github.com/Dj2006-oss/59_rock_paper_scissor.git
+   ```
 
-**Controls:** Left-click colored pads to repeat the sequence. Press R to restart after Game Over.
+2. Navigate to the project directory:
 
+   ```bash
+   cd 59_rock_paper_scissor
+   ```
 
-## Tasks to Complete
+3. Install Pygame:
 
-Each task must be completed using an iterative process involving LLM suggestions and your critical code review.
+   ```bash
+   pip install pygame
+   ```
 
-### Task 1: Fix the inverted outcome evaluation bug
+4. Run the game:
 
-Whenever the player throws a winning hand against the computer, the game awards the point to the CPU instead of the player. Correct the outcome evaluation logic so standard rules apply (Rock beats Scissors, Scissors beats Paper, and Paper beats Rock).
+   ```bash
+   python main.py
+   ```
 
-### Task 2: Implement "First to X Wins" match victory state
+## Source Code
 
-The game currently loops endlessly with no decisive match conclusion. Introduce a target win ceiling that halts play when reached, presents an end-of-match victory banner declaring the ultimate winner, and prompts the player to restart.
+The complete game source code is available in the following GitHub repository:
 
-### Task 3: Implement adaptive AI pattern tracking
+**[Rock Paper Scissors – Game Repository](https://github.com/Dj2006-oss/59_rock_paper_scissor)**
 
-The computer currently picks its moves entirely at random. Introduce adaptive intelligence that records the player's recent throw tendencies and dynamically biases CPU selections toward the counter-move when a player repeatedly favors a specific option.
+## Project Structure
 
-### Task 4: Implement Procedural Gesture Icons & Reveal Animations
-
-Selections are currently rendered as plain text labels. Create distinct visual graphic icons for Rock, Paper, and Scissors, adding a synchronized countdown or shaking reveal animation before displaying both choices each turn.
-
----
-
-## Expected Behavior
-
-- Clicking any choice button selects that move, rolls a CPU choice, and evaluates the winner correctly.
-- Rock beats Scissors, Scissors beats Paper, Paper beats Rock, and identical choices result in a Draw.
-- Scores increment accurately and the round outcome stays visible for 1.8 seconds before clearing picks back to
----
-
-## Folder Structure
-
-```
-rock_paper_scissors/
+```text
+59_rock_paper_scissor/
 ├── game/
 │   ├── button.py
 │   └── game_engine.py
@@ -79,8 +90,12 @@ rock_paper_scissors/
 
 ## Submission Checklist
 
-Submission is only the following three things:
+The assignment requires the following three items:
 
-- [] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
-- [] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
-- [] The Chat/LLM used page link, with the complete chat history
+- [ ] **Before Gameplay Video:** A 10-second video showing the original bug or broken behavior before the changes.
+- [ ] **After Gameplay Video:** A 10-second video demonstrating the corrected scoring and newly implemented features.
+- [ ] **Complete Chat History:** A shareable link to the ChatGPT conversation containing the complete chat history used during the lab.
+
+## Conclusion
+
+This project demonstrates debugging an existing Python game, implementing a match victory condition, improving computer decision-making through adaptive AI, and enhancing gameplay with gesture icons and reveal animations.
