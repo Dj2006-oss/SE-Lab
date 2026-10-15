@@ -1,3 +1,10 @@
+
+## Source Code
+
+The complete game source code is available in the following GitHub repository:
+
+**[Rock Paper Scissors – Game Repository](https://github.com/Dj2006-oss/59_rock_paper_scissor)**
+
 # Rock Paper Scissors Lab
 
 This project is an interactive Rock Paper Scissors game built using **Python and Pygame**. The lab focuses on debugging, AI-assisted development, and implementing additional features to improve gameplay.
@@ -70,12 +77,6 @@ Added visual gesture icons for Rock, Paper, and Scissors, along with a countdown
    ```bash
    python main.py
    ```
-
-## Source Code
-
-The complete game source code is available in the following GitHub repository:
-
-**[Rock Paper Scissors – Game Repository](https://github.com/Dj2006-oss/59_rock_paper_scissor)**
 
 ## Project Structure
 
